@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title Add New Virtual Staff | HubSpot Practicum
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    header
+      h1 Add New Virtual Staff
+      a.button(href="/") Return to Homepage
+
+    main
+      form(action="/update-cobj" method="POST")
+        label(for="name") Name
+        input(type="text" name="name" required)
+        
+        label(for="role") Role
+        input(type="text" name="role")
+        
+        label(for="department") Department
+        input(type="text" name="department")
+        
+        button(type="submit") Add Staff
+
+    footer
+      p &copy; 2025 Your Name

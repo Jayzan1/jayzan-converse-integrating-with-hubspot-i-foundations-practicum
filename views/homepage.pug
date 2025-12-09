@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title Virtual Staff | HubSpot Practicum
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    header
+      h1 Virtual Staff Records
+      a.button(href="/update-cobj") Add New Staff
+
+    main
+      if records && records.length
+        table
+          thead
+            tr
+              th Name
+              th Role
+              th Department
+          tbody
+            each staff in records
+              tr
+                td= staff.properties.name
+                td= staff.properties.role
+                td= staff.properties.department
+      else
+        p No Virtual Staff records yet.
+
+    footer
+      p &copy; 2025 Your Name
